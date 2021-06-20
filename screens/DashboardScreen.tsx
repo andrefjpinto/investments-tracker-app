@@ -11,7 +11,7 @@ import * as brokersActions from '../store/actions/brokers'
 import Colors from '../constants/Colors'
 import BrokerItem from '../components/BrokerItem'
 
-interface DashboardScreenProps {
+type DashboardScreenProps = {
   navigation: StackNavigationProp
 }
 
@@ -38,19 +38,21 @@ const DashboardScreen = (props : DashboardScreenProps) => {
   }, [dispatch, setIsLoading, setError])
 
   useEffect(() => {
-    const willFocusSub = props.navigation.addListener('willFocus', loadBrokers)
+    if (!isLoading) {
+      const willFocusSub = props.navigation.addListener('willFocus', loadBrokers)
 
-    return () => {
-      willFocusSub.remove()
+      return () => {
+        willFocusSub.remove()
+      }
     }
-  }, [loadBrokers])
+  }, [loadBrokers, isLoading])
 
   useEffect(() => {
     setIsLoading(true)
     loadBrokers().then(() => {
       setIsLoading(false)
     })
-  }, [dispatch, loadBrokers])
+  }, [])
 
   if (error) {
     return (

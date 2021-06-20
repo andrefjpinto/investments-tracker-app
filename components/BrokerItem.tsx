@@ -4,7 +4,7 @@ import Broker from '../models/broker'
 
 import Card from './UI/Card'
 
-interface BrokerItemProps {
+type BrokerItemProps = {
   broker: Broker
 }
 

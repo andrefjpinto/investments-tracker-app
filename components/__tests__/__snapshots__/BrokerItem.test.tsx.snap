@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BrokerItem renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "borderRadius": 10,
+      "elevation": 5,
+      "marginHorizontal": 20,
+      "marginVertical": 10,
+      "padding": 10,
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.26,
+      "shadowRadius": 8,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 18,
+      }
+    }
+  >
+    Test Broker
+  </Text>
+  <Text
+    style={
+      Object {
+        "fontSize": 12,
+      }
+    }
+  >
+    https://test.broker
+  </Text>
+</View>
+`;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
 
-interface CardProps {
+type CardProps = {
   style?: {},
   children?: React.ReactNode
 }
